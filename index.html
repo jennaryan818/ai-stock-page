@@ -237,26 +237,36 @@ src="https://www.facebook.com/tr?id=1562072574764032&ev=PageView&noscript=1"
         <input type="text" id="stock-input" placeholder="Enter Stock Code or Ticker">
         <p class="error-message" id="error-message"></p>
       </div>
- <!-- 替换按钮 -->
+<!-- Start按钮 -->
 <button id="start-analysis">Start Free AI Analysis</button>
 
-<!-- 追踪事件并跳转的脚本 -->
+<!-- 分析结果展示（假设已存在，可忽略） -->
+<div id="forecast-results" style="display: none;">
+  <p>Your AI Stock Forecast is Ready</p>
+  <button id="understand-forecast">→ Understand this forecast</button>
+</div>
 <script>
+// 点击 Start，仅显示分析结果，不跳转WhatsApp
 document.getElementById("start-analysis").addEventListener("click", function(e) {
-  e.preventDefault(); // 阻止默认提交
+  e.preventDefault();
+  // 显示分析结果（可根据您已有逻辑修改）
+  document.getElementById("forecast-results").style.display = "block";
+});
 
-  // 触发 Facebook Pixel 事件 'Contact'
+// 点击 Understand，跳转 WhatsApp 并记录Pixel事件
+document.getElementById("understand-forecast").addEventListener("click", function(e) {
+  e.preventDefault();
+
   if (typeof fbq !== 'undefined') {
     fbq('track', 'Contact');
   }
 
-  // 延迟后跳转到 WhatsApp，在新窗口中打开
   setTimeout(function() {
     window.open(
       "https://wa.me/12624055408?text=Hello%2C%20I%20would%20like%20to%20see%20the%20full%20forecast",
-      "_blank"  // 新窗口打开
+      "_blank"
     );
-  }, 500); // 延迟0.5秒确保Pixel事件记录
+  }, 500); // 延迟0.5秒跳转
 });
 </script>
       <p style="margin-top: 12px; font-size: 0.8rem; color: #7fa5d2;">🔒 No sign‑up required. Thousands of users analyze stocks here every day.</p>
