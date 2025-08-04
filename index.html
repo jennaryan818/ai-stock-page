@@ -237,7 +237,26 @@ src="https://www.facebook.com/tr?id=1562072574764032&ev=PageView&noscript=1"
         <input type="text" id="stock-input" placeholder="Enter Stock Code or Ticker">
         <p class="error-message" id="error-message"></p>
       </div>
-      <button id="start-analysis">Start Free AI Analysis</button>
+ <!-- 替换按钮 -->
+<button id="start-analysis">Start Free AI Analysis</button>
+
+<!-- 追踪事件并跳转的脚本 -->
+<script>
+document.getElementById("start-analysis").addEventListener("click", function(e) {
+  e.preventDefault();  // 阻止按钮默认跳转（若有表单提交等）
+  
+  // 触发 Facebook Pixel 自定义事件 'Contact'
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Contact');
+  }
+
+  // 延迟跳转 WhatsApp，确保像素事件被记录
+  setTimeout(function() {
+    window.location.href = "https://wa.me/12624055408?text=Hello%2C%20I%20would%20like%20to%20see%20the%20full%20forecast";
+  }, 500);  // 延迟0.5秒
+});
+</script>
+
       <p style="margin-top: 12px; font-size: 0.8rem; color: #7fa5d2;">🔒 No sign‑up required. Thousands of users analyze stocks here every day.</p>
     </div>
   </header>
