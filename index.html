@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Stock Prediction – Futuristic Landing Page</title>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17293773488"></script>
   <script>
@@ -42,8 +47,7 @@
       src="https://www.facebook.com/tr?id=1063868792562772&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
-</head>
-    /* Global styles */
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
@@ -54,14 +58,13 @@
     }
     h1, h2, h3 { font-weight: 600; }
     a { color: #00ffe7; text-decoration: none; }
-    /* Hero section */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh[...]');
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh[...]
       background-size: 300% 300%;
       animation: moveBg 60s linear infinite;
     }
@@ -133,7 +136,6 @@
       font-size: 0.85rem;
       display: none;
     }
-    /* Loading overlay */
     #loading-overlay, #result-modal {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -173,7 +175,6 @@
       height: 100%;
       background-image: linear-gradient(90deg, #00ffe7, #009dff);
     }
-    /* Result modal content */
     .modal-content {
       background: rgba(0, 15, 40, 0.95);
       border: 1px solid rgba(0, 255, 255, 0.4);
@@ -201,7 +202,6 @@
       font-weight: 600;
       cursor: pointer;
     }
-    /* Sections */
     .section {
       padding: 80px 20px;
       max-width: 1100px;
@@ -238,7 +238,6 @@
       text-align: center;
       font-size: 0.85rem;
     }
-    /* Responsive design for modal */
     @media (max-width: 768px) {
       .legal-modal-content {
         width: 95%;
@@ -251,7 +250,6 @@
         padding: 1.5rem;
       }
     }
-    /* Modal styles */
     .legal-modal {
       display: none;
       position: fixed;
