@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17293773488"></script>
@@ -9,7 +7,23 @@
     gtag('js', new Date());
     gtag('config', 'AW-17293773488');
   </script>
-
+  <!-- Event snippet for AI测股联系 conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17293773488/NQFOCJSpoYAbELCVqLZA',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -20,7 +34,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1063868792562772'); // 你的像素ID
+    fbq('init', '1063868792562772');
     fbq('track', 'PageView');
   </script>
   <noscript>
@@ -29,11 +43,6 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 </head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Stock Prediction – Futuristic Landing Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
     /* Global styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
